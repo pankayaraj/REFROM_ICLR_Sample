@@ -28,8 +28,8 @@ parser.add_argument("--top_k", type=int, default=5)
 args = parser.parse_args()
 
 dpo_model = "Mistral-7B-Instruct-v0.1"
-model_path =  "/root/REFORM_ICLR/models/misaligned_policy"
-reward_path = "/root/REFORM_ICLR/models/imperfect_reward"
+model_path =  "models/misaligned_policy"
+reward_path = "/models/imperfect_reward"
 
 if args.reward_model_type == "trajectory_reward":
     config_reward = PeftConfig.from_pretrained(reward_path)
